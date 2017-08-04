@@ -1,12 +1,12 @@
 /* Master Game object */
 var Game = {
   // Track money
-  this.money = 0;
+  money : 0,
   // Add money
-  function addMoney(money) {
+  addMoney : function addMoney(money) {
     this.money += money;
     document.getElementById("moneyDisplay").innerHTML = "Money: "+ this.money;
-  };
+  }
 };
 
 /* Producer Class */
