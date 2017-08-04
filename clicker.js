@@ -1,5 +1,5 @@
 /* Master Game object */
-var Game = {};
+var Game = {
   // Track money
   this.money = 0;
   // Add money
@@ -7,6 +7,7 @@ var Game = {};
     this.money += money;
     document.getElementById("moneyDisplay").innerHTML = "Money: "+ this.money;
   };
+};
 
 /* Producer Class */
 Game.Producer = function() {
