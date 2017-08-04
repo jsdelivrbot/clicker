@@ -1,16 +1,12 @@
 /* Master Game object */
 var Game = {};
-
-/* Player Class */
-// Constructor
-Game.Player = function() {
+  // Track money
   this.money = 0;
-};
-// Add money
-Game.Player.prototype.addMoney = function(money) {
-  this.money += money;
-  document.getElementById("moneyDisplay").innerHTML = "Money: "+ this.money;
-};
+  // Add money
+  function addMoney(money) {
+    this.money += money;
+    document.getElementById("moneyDisplay").innerHTML = "Money: "+ this.money;
+  };
 
 /* Producer Class */
 Game.Producer = function() {
@@ -18,14 +14,12 @@ Game.Producer = function() {
 };
 // Payout
 Game.Producer.prototype.payout = function() {
-  Game.player.addMoney(this.basePayout)
+  Game.addMoney(this.basePayout)
 };
 
 
 
 /* Debug Testing Code */
-// Setup player
-Game.player = new Game.Player();
 // Setup Clicker
 Game.clicker = new Game.Producer();
 // Bind click to Payout
